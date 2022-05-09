@@ -1,60 +1,1374 @@
 <!doctype html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta content="因不可抗因素，本站暂时关停，暂避风头。" name="description">
-  <meta content="保护,不可抗,躲避" name="keywords">
-  <link rel="icon" type="image/png" href="assets/images/hide-safe.ico.png">
-  <link rel="icon" type="image/png" sizes="144x144" href="assets/images/hide-safe.ico.png">
-  <link rel="apple-touch-icon" type="image/png" href="assets/images/hide-safe.ico.png">
-  <title>暂避风头</title>
-  <style>
-    @font-face {
-      font-family: 'MFYuanHei';
-      src: url('data:application/octet-stream;base64,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') format('TrueType');
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
-    html,body {width: 100%;height:100%;}
-    body {
-      display: flex;flex-direction:column;justify-content:top;padding:0;margin:0;
-      background-image: url(assets/images/hide-safe.min.png),linear-gradient(150deg, #fff, #f1f2fe);
-      background-repeat: no-repeat;
-      background-size: auto 85%, cover;
-      background-position: 60vw 100%, 50% 50%;
-      font-family: sans-serif;
-    }
-    div {
-      padding: 0 0 0 10vw;
-      transform: translateY(100%);
-    }
-    h1 {margin:0;font-family: "MFYuanHei";font-weight: normal;font-size: 10vmax;line-height: 1;}
-    h2 {margin:0;font-family: "MFYuanHei";font-weight: normal;font-size: 7vmax;line-height: 1;}
-    p {font-size: 1.8vmax;color:#878b99;margin: 10px 0 0 .6vmax;letter-spacing: .1vmax;}
-    @media screen and (orientation: portrait) {
-      body {
-        justify-content: flex-start;
-        align-items: center;
-        background-position: calc(50% - 20px) 120%, 50% 50%;
-        background-size: auto 70%, cover;
-      }
-      div {
-        padding: 15vh 0 0;
-      }
-    }
-      
-              .pic img{width:250px}
-      
-  </style>
+<meta charset="utf-8">
+<title>Pawfit智能宠物定位&运动检测器</title>
+	
+	
+	<meta name="keywords" content="Pawfit 智能宠物定位 运动检测器 英国知名宠物智能品牌">
+<meta name="decration" content="Pawfit 智能宠物定位 运动检测器 英国知名宠物智能品牌">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	
+	<link rel="icon" href="https://www.mypawfit.cn/favicon.ico" type="image/x-icon">  
+     <link rel="shortcut icon" href="https://www.mypawfit.cn/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/reset.css?v=1.001">
+	<link rel="stylesheet" href="css/common.css?v=1.001">
+	<link rel="stylesheet" href="css/index.css?v=1.001">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css?v=1.001" />
+	<link rel="stylesheet" type="text/css" href="css/screen.css?v=1.001" />
+	<link rel="stylesheet" type="text/css" href="css/desktop.css?v=1.001" />
+
+<link rel="stylesheet" type="text/css" href="css/mobile.css?v=1.001" />
+	    <script>
+        ! function (a, b) {
+            function c() {
+                var b = f.getBoundingClientRect().width;
+                b / i > 540 && (b = 540 * i);
+                var c = b / 10;
+                f.style.fontSize = c + "px", k.rem = a.rem = c
+            }
+            var d, e = a.document,
+                f = e.documentElement,
+                g = e.querySelector('meta[name="viewport"]'),
+                h = e.querySelector('meta[name="flexible"]'),
+                i = 0,
+                j = 0,
+                k = b.flexible || (b.flexible = {});
+            if (g) {
+                var l = g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);
+                l && (j = parseFloat(l[1]), i = parseInt(1 / j))
+            } else if (h) {
+                var m = h.getAttribute("content");
+                if (m) {
+                    var n = m.match(/initial\-dpr=([\d\.]+)/),
+                        o = m.match(/maximum\-dpr=([\d\.]+)/);
+                    n && (i = parseFloat(n[1]), j = parseFloat((1 / i).toFixed(2))), o && (i = parseFloat(o[1]), j =
+                        parseFloat((1 / i).toFixed(2)))
+                }
+            }
+            if (!i && !j) {
+                var p = (a.navigator.appVersion.match(/android/gi), a.navigator.appVersion.match(/iphone/gi)),
+                    q = a.devicePixelRatio;
+                i = p ? q >= 3 && (!i || i >= 3) ? 3 : q >= 2 && (!i || i >= 2) ? 2 : 1 : 1, j = 1 / i
+            }
+            if (f.setAttribute("data-dpr", i), !g)
+                if (g = e.createElement("meta"), g.setAttribute("name", "viewport"), g.setAttribute("content",
+                        "initial-scale=" + j + ", maximum-scale=" + j + ", minimum-scale=" + j + ", user-scalable=no"),
+                    f.firstElementChild) f.firstElementChild.appendChild(g);
+                else {
+                    var r = e.createElement("div");
+                    r.appendChild(g), e.write(r.innerHTML)
+                }
+            a.addEventListener("resize", function () {
+                clearTimeout(d), d = setTimeout(c, 300)
+            }, !1), a.addEventListener("pageshow", function (a) {
+                a.persisted && (clearTimeout(d), d = setTimeout(c, 300))
+            }, !1), "complete" === e.readyState ? e.body.style.fontSize = 12 * i + "px" : e.addEventListener(
+                "DOMContentLoaded",
+                function () {
+                    e.body.style.fontSize = 12 * i + "px"
+                }, !1), c(), k.dpr = a.dpr = i, k.refreshRem = c, k.rem2px = function (a) {
+                var b = parseFloat(a) * this.rem;
+                return "string" == typeof a && a.match(/rem$/) && (b += "px"), b
+            }, k.px2rem = function (a) {
+                var b = parseFloat(a) / this.rem;
+                return "string" == typeof a && a.match(/px$/) && (b += "rem"), b
+            }
+        }(window, window.lib || (window.lib = {}));
+    </script>
+	
+
+	
+	
+	
 </head>
+
 <body>
-  <div>
-    <h1>暂避风头</h1>
-<!--    <h1>Run away</h1>-->
-    <p>因不可抗因素，本站暫時關停，恢復日期待定。</p>
-<!--    <p>I haven't any money.</p>-->
+
+
+
+
+<div class="pc">
+	
+
+		
+	
+<!--Header-->
+<div class="header fixed">
+<div class="header_wrap">
+
+	<div class="nav">
+		
+<div class="public-header">
+	
+	<div class="public-container clearfloat">
+	
+		<div class="header-logo"  id="logo_w"><a href="index.html"></a></div>
+		<ul class="header-nav clearfloat" id="nav_w">
+		
+		<li class="item left-to-right"><a href="index.html">主页</a></li>
+		<!-- <li class="item left-to-right"><a href="index.html">购买</a></li>	 -->
+		<li class="item left-to-right" style="cursor:pointer;" ><a href="index.html">服务支持</a>
+		
+		
+		
+		<div class="tanchuangtop"></div>
+			
+			<div class="tanchuang-support">
+				
+				<ul class="tanchuang-nav">
+					
+						<li><a href="faqs.html">常见问题解答</a></li>
+					
+						<li><a href="terms.html">使用条款</a></li>
+					
+					<li><a href="privacy.html">隐私政策</a></li>
+					
+					
+					</ul>
+					
+			
+			</div>
+			
+			
+			
+			
+			
+			</li>
+		<li class="item left-to-right" style="cursor:pointer;" ><a href="index.html#">关于我们</a>
+			
+			
+			<div class="tanchuangtop"></div>
+                    
+						<div class="tanchuang-about">
+				
+				<ul class="tanchuang-nav">
+					
+						<li><a href="company.html" >公司</a></li>
+					
+						<li><a href="contact.html">联系我们</a></li>
+					
+					</ul>
+					
+			
+			</div>
+			
+			
+			
+			
+			
+			
+			</li>
+	
+		</ul>
+		
+		
+	</div> 
+	
+</div>
+	
+	
+	</div>
+	
+	
+	
+</div>
+</div>	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+
+<div id="fullpage">
+
+
+
+
+
+	<div class="section section1">
+
+        
+
+
+<!--内容-->
+
+<div class="public-container page1-intro clearfloat">
+	
+		<p class="page1-text clearfloat">智能宠物定位&运动检测器
+			<p style="color: #FFF;font-size:20px;font-family: sourcehansanscn-bold,Microsoft YaHei,Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    float:left;
+    margin-top:20px;
+    margin-left:450px;">— 英国知名宠物智能品牌</p>
+	</p>
+	
+
+<!--
+		<div class="page1-actions clearfloat">
+	
+	
+	<a href="buy.html" class="btn-buy">Read more</a>
+	
+	</div>
+	
+-->
+</div>
+
+	
+     
+
+
+        
+<div class="public-footer">
+	<div class="next-page clearfloat"><a href="index.html#accurate"><img src="images/Dropdown.png" alt=""></a></div>
+</div>   
+    
+    	
+<!--
+<div class="public-footer-nav">	
+    	<ul class="public-nav2 clearfloat">
+		<li class="item left-to-right"><a href="">Legal</a></li>
+		<li class="item left-to-right"><a href="">Contact us</a></li>	
+	</ul>			
+   </div>
+-->
+
+
+
+</div>
+
+
+
+
+	
+	
+	
+	
+	
+<div class="section section2">
+
+	
+	
+	
+	
+<!--	内容-->
+
+	<div class="public-container page2-intro">
+		
+		<h1 class="page2-text-h1">精准实时定位
+	</h1>
+		
+	
+		<p class="page2-text">Pawfit利用GPS，WiFi和蜂窝技术，结合<br>
+我们自主研发的位置优化算法，让你能最<br>
+快和最准确定位您的宠物。
+	</p>
+
+	<div class="page2-img">
+		
+		<div class="LiveTrackerIcon"><a href="javascript:void(0)" class="page2-1"></a></div>
+		<div class="SoundIcon"><a href="javascript:void(0)" class="page2-2"></a></div>
+		<div class="PawIcon"><a href="javascript:void(0)" class="page2-3"></a></div>
+	
+		
+		</div>
+		
+	</div>
+	
+
+	
+	
+	
+	
+<div class="public-footer">
+	<div class="next-page"><a href="index.html#activity"><img src="images/Dropdown.png" alt=""></a></div>
+</div>   
+    
+    	
+<!--
+<div class="public-footer-nav">	
+    	<ul class="public-nav2 clearfloat">
+		<li class="item item2-black left-to-right"><a href="">Legal</a></li>
+		<li class="item item2-black left-to-right"><a href="">Contact us</a></li>	
+	</ul>			
+   </div>
+-->
+	
+	
+	
+	
+<!--LiveTrackerIcon-->
+ <span class="page2-1-close"><div id="page2-1-bg" class="bgPop"></div></span>
+<!--弹出框-->
+<div id="page2-1" class="pop">
+    <div class="pop-top">
+        <span class="page2-1-close"><img src="images/close.png" alt=""></span>
+    </div>
+    <div class="pop-content">
+     <p class="pop-content-text">
+		此功能会在10分钟的时间内每5秒更新一次宠物的位置。此模式可以频繁和准确地更新您宠物的位置，还保留它的运动轨迹，最大限度地提高了丢失时找回宠物的可能性。请注意，持续启用此模式会快速耗尽电池。所以只能在必要时才使用此功能。
+		</p>
+	</div>
+</div>  
+	
+	
+	
+<!--SoundIcon-->
+ <span class="page2-2-close"><div id="page2-2-bg" class="bgPop"></div></span>
+<!--弹出框-->
+<div id="page2-2" class="pop">
+    <div class="pop-top">
+        <span class="page2-2-close"><img src="images/close.png" alt=""></span>
+    </div>
+    <div class="pop-content">
+     <p class="pop-content-text">
+		由于使用GPS，WiFi或蜂窝信号定位的准确性限制，Pawfit可以帮助您在最后几米范围内通过光线和声音定位您的宠物。这对于在夜间或森林中搜索丢失的宠物非常有用。
+		</p>
+	</div>
+</div>	
+	
+	
+	
+<!--PawIcon-->
+<span class="page2-3-close"><div id="page2-3-bg" class="bgPop"></div></span>
+<!--弹出框-->
+<div id="page2-3" class="pop">
+    <div class="pop-top">
+        <span class="page2-3-close"><img src="images/close.png" alt=""></span>
+    </div>
+    <div class="pop-content">
+     <p class="pop-content-text">
+		这个功能让你快速更新宠物的大概位置。如果你只是想快速找到宠物的大致位置，这是很有用的。启用此功能后，您将收到大约3-5秒的位置更新。如果存在良好的GPS信号，大约20秒后，您将收到更准确的位置更新。
+		 </p>
+	</div>
+</div>	
+	
+	
+	
+	
+</div>
+	
+	
+	
+	
+	
+<div class="section section3">
+	
+	
+	
+	        
+
+
+
+
+
+<!--内容-->
+<div class="public-container page3-intro">
+		
+		<h1 class="page3-text-h1">运动检测
+	</h1>
+		
+	
+		<p class="page3-text">Pawfit实时监测您的宠物的运动状态，并以步数，<br>
+距离，燃烧的卡路里，活动和休息时间的形式呈现<br>
+给您。
+	</p>
+	<p class="page3-text">Pawfit允许您为宠物设定运动目标，并根据您的宠<br>
+物品种和体重为您提供建议和更多关于运动检测的<br>
+信息。
+	</p>
+	
+
+	
+	
+<div class="page3-img">
+	
+		<div class="Activehour"><a href="javascript:void(0)" class="page3-1"></a></div>
+		<div class="burnicon"><a href="javascript:void(0)" class="page3-2"></a></div>
+		<div class="Dogicon"><a href="javascript:void(0)" class="page3-3"></a></div>
+	    <div class="Distanceicon"><a href="javascript:void(0)" class="page3-4"></a></div>
+		</div>
+	
+		
+		
+		
+	
+</div>	
+	
+	
+	
+	
+	
+	
+	
+     
+
+
+        
+<div class="public-footer">
+	<div class="next-page clearfloat"><a href="index.html#protection"><img src="images/Dropdown.png" alt=""></a></div>
+</div>   
+    
+    	
+<!--Activehour-->
+ <span class="page3-1-close"><div id="page3-1-bg" class="bgPop"></div></span>
+<!--弹出框-->
+<div id="page3-1" class="pop">
+    <div class="pop-top">
+        <span class="page3-1-close"><img src="images/close.png" alt=""></span>
+    </div>
+    <div class="pop-content">
+     <p class="pop-content-text">
+		宠物在一天中所活跃的时间是根据您在注册宠物时输入的物理数据估算的：类型，品种，年龄和体重，以及Pawfit记录的步数。活动小时数将在午夜重置，并在此后立即开始计数。
+		</p>
+	</div>
+</div>	
+	
+	
+	
+	<!--burnicon-->
+<span class="page3-2-close"><div id="page3-2-bg" class="bgPop"></div></span>
+<!--弹出框-->
+<div id="page3-2" class="pop">
+    <div class="pop-top">
+        <span class="page3-2-close"><img src="images/close.png" alt=""></span>
+    </div>
+    <div class="pop-content">
+     <p class="pop-content-text">
+	  您的宠物每天燃烧的卡路里是根据您在注册宠物时输入的物理数据估算的：类型，品种，年龄和体重，以及记录的步数。卡路里计数将在午夜重置，并在此后立即开始计数。
+		</p>
+	</div>
+</div>	
+	
+	<!--Dogicon-->
+  <span class="page3-3-close"><div id="page3-3-bg" class="bgPop"></div></span>
+<!--弹出框-->
+<div id="page3-3" class="pop">
+    <div class="pop-top">
+        <span class="page3-3-close"><img src="images/close.png" alt=""></span>
+    </div>
+    <div class="pop-content">
+     <p class="pop-content-text">
+	
+		
+			您的宠物一天所花的休息时间是根据您的智能设备记录的零步数的持续时间估算的。休息时间计数将在午夜重置，并在此后立即开始计数。
+		
+		
+		</p>
+	</div>
+</div>
+	
+	<!--Distanceicon-->
+<span class="page3-4-close"><div id="page3-4-bg" class="bgPop"></div></span>
+<!--弹出框-->
+<div id="page3-4" class="pop">
+    <div class="pop-top">
+        <span class="page3-4-close"><img src="images/close.png" alt=""></span>
+    </div>
+    <div class="pop-content">
+     <p class="pop-content-text">
+		
+		 
+		 	 您的宠物一天的行程距离是根据您在注册宠物时输入的物理数据估算的：类型，品种，年龄和体重，以及您的跟踪器记录的步数。您的跟踪器的距离将在午夜重置，并在此后立即开始计数。
+		 
+		 
+		</p>
+	</div>
+</div>
+	
+	
+	
+</div>
+	
+	
+	
+	
+	
+	
+<div class="section section4">
+	
+	<div class="desktop">
+	
+
+	
+	
+	
+	
+	
+	
+	<div class="desktop-content">
+		
+		
+
+	
+		
+		
+<div class="desktop-content-download-page4">
+	
+	<div class="page4-intro">
+		
+		<h1 class="page4-text-h1">保护功能<div class="yellowline"></div></h1>
+	<div class="page4-img">
+		<div class="temperatrue"><a href="javascript:void(0)" class="page4-1"></a></div>
+		<div class="removal"><a href="javascript:void(0)" class="page4-2"></a></div>
+		<div class="virtual"><a href="javascript:void(0)" class="page4-3"></a></div>
+	
+		</div>
+	<div class="clearfloat1"></div>
+	
+		<h3 class="page4-text-h3">音频播报功能
+	</h3>
+	<p class="page4-text">
+
+		
+		
+
+		
+通过使用最新的文本到语音转换技术，Pawfit可以将您在注册帐户和宠物时<br>
+输入的宠物相关信息转换为音频数据。任何人按下电源按钮都将听到此信息<br>
+的广播。这非常有用，如果您的宠物偏离网络覆盖范围，陌生人可以按电源<br>
+按钮听到音频播报后并将您的宠物送回安全地点。
+		
+		
+		
+		
+		
+	</p>
+</div>
+	
+	
+		</div>
+		
+		
+		
+	<div class="desktop-content-preview-page4">
+		
+	
+	<div class="desktop-phone-page4"></div>
+	
+	
+	
+		</div>
+	
+		
+		
+	
+	</div>
+	
+	<div class="public-footer">
+	<div class="next-page"><a href="index.html#design"><img src="images/Dropdown.png" alt=""></a></div>
+	</div>
+		
+	
+	
+<!--
+	<div class="public-footer-nav">	
+    	<ul class="public-nav2">
+		<li class="item item2-black left-to-right"><a href="">Legal</a></li>
+		<li class="item item2-black left-to-right"><a href="">Contact us</a></li>	
+	</ul>			
+   </div>
+-->
+	
+	<!--Temperature-->
+<span class="page4-1-close"><div id="page4-1-bg" class="bgPop"></div></span>
+<!--弹出框-->
+<div id="page4-1" class="pop">
+    <div class="pop-top">
+        <span class="page4-1-close"><img src="images/close.png" alt=""></span>
+    </div>
+    <div class="pop-content">
+     <p class="pop-content-text">
+		 Pawfit通过检测任何异常的温度变化（例如火灾），通知您的宠物是否在不利条件下暴露。
+		 </p>
+	</div>
+</div>	
+	
+	
+	
+		<!--Removal-->
+<span class="page4-2-close"><div id="page4-2-bg" class="bgPop"></div></span>
+<!--弹出框-->
+<div id="page4-2" class="pop">
+    <div class="pop-top">
+        <span class="page4-2-close"><img src="images/close.png" alt=""></span>
+    </div>
+    <div class="pop-content">
+     <p class="pop-content-text">
+		 Pawfit会通知您设备是否从颈圈附件中被取出来，即发生意外事故。
+		 </p>
+	</div>
+</div>	
+	
+	
+	
+			<!--Virtual-->
+<span class="page4-3-close"><div id="page4-3-bg" class="bgPop"></div></span>
+<!--弹出框-->
+<div id="page4-3" class="pop">
+    <div class="pop-top">
+        <span class="page4-3-close"><img src="images/close.png" alt=""></span>
+    </div>
+    <div class="pop-content">
+     <p class="pop-content-text">
+		 Pawfit提供多达10个定制的安全区域，当您的宠物穿过这些围栏时，您将通过APP获得通知。
+		 </p>
+	</div>
+</div>	
+	
+	
+		
+		
+	</div>	
+		
+		
+	
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+<div class="section section5">
+	
+	
+	
+	
+	        
+
+
+
+
+
+<!--内容-->
+
+	<div class="public-container page5-intro">
+		
+		<h1 class="page5-text-h1">专属宠物设计</h1>
+	<h3 class="page5-text-h3">简易安装/拆卸机制。防咬防摔结构，IP65防水。</h3>
+	<p class="page5-text">
+		
+		
+<!--
+Recommended for most dogs and large cats with weight of 3.5kg and up. No need to buy a new collar.<br>
+Pawfit can attach to any collar or harness up to 32mm wide.
+-->
+	
+
+Pawfit适合体重3.5公斤以上的大多数狗和大型猫科动物。<br>
+它可以佩戴在所有宽达3.2CM的宠物项圈上。		
+		
+		
+		
+		
+	</p>
+
+
+
+		
+		
+	
+			
+	
+</div>	
+	
+	
+	
+	
+	
+	
+	
+	
+     
+
+
+        
+<div class="public-footer">
+	<div class="next-page clearfloat"><a href="index.html#battery"><img src="images/Dropdown.png" alt=""></a></div>
+</div>   
+    
+    	
+<!--
+<div class="public-footer-nav">	
+    	<ul class="public-nav2 clearfloat">
+		<li class="item left-to-right"><a href="">Legal</a></li>
+		<li class="item left-to-right"><a href="">Contact us</a></li>	
+	</ul>			
+   </div>
+-->
+	
+	
+	
+	
+	
+	
+	
+	
+</div>
+	
+	
+	
+	
+	
+	
+	
+<div class="section section6">
+	
+	
+	        
+
+
+
+
+
+<!--内容-->
+	
+	<div class="public-container page6-intro">
+		
+		<h1 class="page6-text-h1">长续航<div class="yellowline"></div>
+			
+			
+	
+	</h1>
+	
+	
+
+	
+		<h3 class="page6-text-h3">自主研发的智能省电算法+700毫安大容量电池，低电量<br>
+警报，8-10天待机，5-6天正常使用（具体时间受GPS，WiFi和<br>
+基站信号的强弱影响）
+	</h3>
+	<p class="page6-text">定位服务是最耗电的任务。Pawfit不断根据宠物的运动状况，来调整开启定位的频率，<br>
+	以确保只有在必要的时候开启定位服务。请<a href="javascript:void(0)" class="page6-1">点击这里</a>阅读关于更多我们的省电算法。<br>
+	
+	</p>
+
+
+
+		
+		
+
+			
+	
+</div>	
+        
+<div class="public-footer">
+	<div class="next-page clearfloat"><a href="index.html#dispenser"><img src="images/Dropdown.png" alt=""></a></div>
+</div>   
+    
+    	
+<!--battery-->
+<span class="page6-1-close"><div id="page6-1-bg" class="bgPop"></div></span>
+<!--弹出框-->
+<div id="page6-1" class="pop-page6-1">
+    <div class="pop-top">
+        <span class="page6-1-close"><img src="images/close.png" alt=""></span>
+    </div>
+    <div class="pop-content">
+     <p class="pop-content-text">
+		为了记录您的宠物的历史位置，Pawfit需要不时的打开位置服务。 然而，这将会消耗很多电量。因此，Pawfit会不断分析你的宠物的运动状态，并根据您的宠物的活动水平，每30秒到2小时更新宠物的位置。您的宠物活动得越多，Pawfit就会更频繁地发送位置更新。如果您的宠物正在休息，那么位置服务将每2小时开启一次。
+
+		 </p>
+		
+	 <p class="pop-content-text">	 
+Pawfit还提供了设置家庭WiFi的选项。如果您的宠物在WiFi范围内，那么定位服务将以最低限度的水平运行。通过选择一个覆盖宠物入住地点的WiFi，可以延长您的设备的电池寿命。
+	 </p>	
+		
+	</div>
+</div>	
+	
+	
+	
+    
+</div>
+<div class="section section9">
+	<!--内容-->
+		
+		<div class="public-container page6-intro">
+			
+			<h1 class="page8-text-h1">宠物智能饮水机<div class="yellowline"></div>
+		</h1>
+	
+			<p  class="page8-text" style="font-size: 20px;">睡眠静音 / 专业倾斜角度 / 仿溪流设计 / 五重过滤净化<br>
+				智能小程序远程控制<br>
+			</p>
+			<p class="page8-text">
+				小程序支持iOS10 微信版本7.0.4以上，安卓5.0 微信版本7.0.4以上
+			</p>
+	</div>	
+	<div class="public-footer">
+		<div class="next-page clearfloat"><a href="index.html#app"><img src="images/Dropdown.png" alt=""></a></div>
+	</div>   
+		
+	</div>
+		
+	
+	
+<div class="section section7">
+	
+	
+   <div class="public-footer">
+	<div class="next-page clearfloat"><a href="index.html#download"><img src="images/Dropdown.png" alt=""></a></div>
+</div>  
+</div>
+	
+
+
+<div class="section section8">
+	<div class="desktop">
+	<div class="desktop-content">
+		
+		
+<div class="desktop-content-preview">
+		
+	
+	<div class="desktop-phone">
+	
+
+	</div>
+	
+	
+	
+		</div>
+	
+		
+		
+<div class="desktop-content-download">
+	
+	<div class="slogan-top">
+	
+	<p>APP下载</p>
+	<p>兼容<br>
+苹果 iOS9.0 或更高版本<br>
+谷歌 Android 5.0 或更高版本</p>
+
+    </div>
+    <div class="desktop-btns">
+
+        <div class="apple-img"><a href="https://itunes.apple.com/cn/app/pawfit/id1461707996?mt=8"></a></div>
+        <div class="google-img"><a href="cn/download/android-latest.apk"></a></div>
+
+    </div>
+
+
+</div>
+
+
+    </div>
+
+
+    </div>
+
+
+    <div class="public-footer">
+
+        <div style="font-size:14px; color:#93979f;bottom:35px;position: absolute;right:0;left: 0">
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+
+</div>
+
+
+<!-- ========================= START FP NAVIGATION ======================== -->
+		<div id="fp-nav">
+			<ul>
+				<li data-menuanchor="main" class="active">
+					<a href="index.html#main">
+						<span></span>
+					</a>
+					<div class="fp-tooltip">Pawfit宠物定位和运动检测器</div>
+				</li>
+				<li data-menuanchor="accurate">
+					<a href="index.html#accurate">
+						<span></span>
+					</a>
+					<div class="fp-tooltip">精准实时定位</div>
+				</li>
+				<li data-menuanchor="activity">
+					<a href="index.html#activity">
+						<span></span>
+					</a>
+					<div class="fp-tooltip">运动检测</div>
+				</li>
+				<li data-menuanchor="protection">
+					<a href="index.html#protection">
+						<span></span>
+					</a>
+					<div class="fp-tooltip">保护功能</div>
+				</li>
+				<li data-menuanchor="design">
+					<a href="index.html#design">
+						<span></span>
+					</a>
+					<div class="fp-tooltip">专属宠物设计</div>
+				</li>
+				
+				<li data-menuanchor="battery">
+					<a href="index.html#battery">
+						<span></span>
+					</a>
+					<div class="fp-tooltip">长续航</div>
+				</li>
+				<li data-menuanchor="dispenser">
+					<a href="index.html#dispenser">
+						<span></span>
+					</a>
+					<div class="fp-tooltip">宠物智能饮水机</div>
+				</li>
+				<li data-menuanchor="app">
+					<a href="index.html#app">
+						<span></span>
+					</a>
+					<div class="fp-tooltip">Pawfit App</div>
+				</li>
+				
+				
+				<li data-menuanchor="download">
+					<a href="index.html#download">
+						<span></span>
+					</a>
+					<div class="fp-tooltip">App 下载</div>
+				</li>
+				
+				
+				
+			</ul>
+		</div>
+
+
+
+</div>
+	
+	
+	<div class="mobile">
+		
+
+		
+		
+	
+<header id="header">
+
+    <span class="left"><a href="index.html"><img src="images/phonelogo.png" alt=""></a></span>
+    <span class="right"></span>
+</header>
+<div class="menu">
+    <!-- <li><a href="buy.html">购买</a></li> -->
+	<li><a href="faqs.html">常见问题解答</a></li>
+	<li><a href="terms.html">使用条款</a></li>
+	<li><a href="privacy.html">隐私政策</a></li>
+	<li><a href="https://latsen.com/">公司简介</a></li>
+	<li><a href="contact.html">联系我们</a></li>
+   
+</div>
+	
+	
+	
+	<div class="mobile-content">
+		
+	<div class="pic-img">	
+		<img src="images/index-1.jpg" alt="">
+	</div>
+		
+		<div class="mobile-index-1">		
+		
+	 <h1 class="mobile-text-h1">精准实时定位</h1>
+	
+	<p class="mobile-text">Pawfit利用GPS，WiFi和蜂窝技术，结合<br>
+我们自主研发的位置优化算法，让你能最<br>
+快和最准确定位您的宠物。	
+		
+	</p>	
+		
+		</div>		
+		
+	<div class="pic-img">	
+		<img src="images/index-2.jpg" alt="">
+	</div>	
+	<div class="pic-img">	
+		<img src="images/index-3.jpg" alt="">
+	</div>		
+		
+		<div class="index-pic-box">
+				
+				
+			<div class="pic-img">	
+		<img src="images/index-4.jpg" alt="">
+			</div>
+				
+			<div class="pro-intro">	
+				
+    <h1 class="mobile-text-h1">运动检测</h1>
+	
+	<p class="mobile-text">Pawfit实时监测您的宠物的运动状态，并以步数，
+距离，燃烧的卡路里，活动和休息时间的形式呈现
+给您。<br>Pawfit允许您为宠物设定运动目标，并根据您的宠物品种和体重为您提供建议和更多关于运动检测的
+信息。	
+
+	
+		
+	</p>	
+<!--		<p class="mobile-text-r">Read more ></p>	-->
+	</div>			
+				
+				
+        </div>
+			
+<div class="pic-img">	
+		<img src="images/index-5.jpg" alt="">
+	</div>	
+<div class="pic-img">	
+		<img src="images/index-6.jpg" alt="">
+	</div>		
+<div class="pic-img">	
+		<img src="images/index-7.jpg" alt="">
+	</div>		
+<!--
+			<div class="pro-intro-audio">		
+	 <h1 class="mobile-text-h1-audio">Audio ID tag</h1>
+	
+	<p class="mobile-text-audio">By using text-to-speech technology,
+ Pawfit converts your pet’s ID to audio data. Anyone
+ presses the power button will hear the
+ broadcast of this information. This gives it
+ more chance for your pet to be found in
+ unusual circumstances such as no network
+ coverage.	
+
+	
+		
+	</p>	
+		
+		
+			</div>	
+-->
+		
+		<div class="pic-img">	
+		<img src="images/index-8.jpg" alt="">
+	</div>
+		
+		<div class="pic-img">	
+		<img src="images/index-9.jpg" alt="">
+	</div>
+		
+		
+		<div class="pro-intro-read">
+		
+		<div class="pic-img">	
+		<img src="images/index-10.jpg" alt="">
+					
+	</div>
+	
+<!--
+		
+		<div class="pro-intro-read">		
+		<p class="mobile-text-read">Read more ></p>	
+	</div>
+-->
+		
+			</div>
+		
+				
+			<div class="pic-img">	
+				<img src="images/index-18.png" alt="">
+			</div>
+		
+		<div class="pro-intro-download">
+		
+		<div class="pic-img">	
+		<img src="images/index-11.jpg" alt="">
+					
+	</div>
+	
+		
+		<div class="pro-intro-download-btns">
+	
+	<a href="https://itunes.apple.com/cn/app/pawfit/id1461707996?mt=8"><div class="apple-img"></div></a>
+	<a href="cn/download/android-latest.apk"><div class="google-img"></div></a>
+	
+	</div>
+		
+			</div>
+		
+		
+		
+		
+		
+		
+        </div>
+		
+		
+		
+		
+	 <div class="mobile-footer">
+        
+
+
+
+  
+  
+  <div class="footer-nav">
+      
+        <ul class="mobile-footer-nav">
+             
+         <li class="item"><a href="company.html">公司</a></li>
+         <li class="item"><a href="faqs.html">常见问题解答</a></li>
+         <li class="item"><a href="terms.html">使用条款</a></li>
+		</ul>	
+			 <ul class="mobile-footer-nav-2">
+         <li class="item"><a href="privacy.html">隐私政策</a></li>
+         <li class="item"><a href="contact.html">联系我们</a></li>
+          </ul>      
+                
+            
+      
+      
   </div>
+  
+  
+  
+  <div class="mobile-footer-line"></div>
+   <div class="mobile-footer-info">
+                  
+                    
+                    
+                </div>
+
+
+    
+    
+</div>			
+		
+		
+		
+		
+		
+		
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	
+	
+	
+<script type="text/javascript">
+if (screen.width>768){
+  
+    document.write('<script type="text/javascript" src="js/jquery.fullPage.min.js"><\/script>');
+	document.write('<script type="text/javascript" src="js/index.js?v=1.001"><\/script>');
+	
+	}
+</script>	
+	
+	
+
+
+	<script>
+    $(document).ready(function () {
+        $('.page2-1-close').click(function () {
+            $('#page2-1-bg,#page2-1').hide();
+        });
+        $('.page2-1').click(function () {
+            $('#page2-1-bg,#page2-1').show();
+        });
+    })
+		
+		
+	   $(document).ready(function () {
+        $('.page2-2-close').click(function () {
+            $('#page2-2-bg,#page2-2').hide();
+        });
+        $('.page2-2').click(function () {
+            $('#page2-2-bg,#page2-2').show();
+        });
+    })	
+		
+		
+		   $(document).ready(function () {
+        $('.page2-3-close').click(function () {
+            $('#page2-3-bg,#page2-3').hide();
+        });
+        $('.page2-3').click(function () {
+            $('#page2-3-bg,#page2-3').show();
+        });
+    })	
+		
+		
+		$(document).ready(function () {
+        $('.page3-1-close').click(function () {
+            $('#page3-1-bg,#page3-1').hide();
+        });
+        $('.page3-1').click(function () {
+            $('#page3-1-bg,#page3-1').show();
+        });
+    })	
+		
+			$(document).ready(function () {
+        $('.page3-2-close').click(function () {
+            $('#page3-2-bg,#page3-2').hide();
+        });
+        $('.page3-2').click(function () {
+            $('#page3-2-bg,#page3-2').show();
+        });
+    })	
+		
+		
+			$(document).ready(function () {
+        $('.page3-3-close').click(function () {
+            $('#page3-3-bg,#page3-3').hide();
+        });
+        $('.page3-3').click(function () {
+            $('#page3-3-bg,#page3-3').show();
+        });
+    })	
+		
+		
+		
+			$(document).ready(function () {
+        $('.page3-4-close').click(function () {
+            $('#page3-4-bg,#page3-4').hide();
+        });
+        $('.page3-4').click(function () {
+            $('#page3-4-bg,#page3-4').show();
+        });
+    })	
+		
+		
+		
+		$(document).ready(function () {
+        $('.page4-1-close').click(function () {
+            $('#page4-1-bg,#page4-1').hide();
+        });
+        $('.page4-1').click(function () {
+            $('#page4-1-bg,#page4-1').show();
+        });
+    })	
+		
+		$(document).ready(function () {
+        $('.page4-2-close').click(function () {
+            $('#page4-2-bg,#page4-2').hide();
+        });
+        $('.page4-2').click(function () {
+            $('#page4-2-bg,#page4-2').show();
+        });
+    })	
+		
+		$(document).ready(function () {
+        $('.page4-3-close').click(function () {
+            $('#page4-3-bg,#page4-3').hide();
+        });
+        $('.page4-3').click(function () {
+            $('#page4-3-bg,#page4-3').show();
+        });
+    })	
+		
+		
+		
+		
+
+		
+		$(document).ready(function () {
+        $('.page6-1-close').click(function () {
+            $('#page6-1-bg,#page6-1').hide();
+        });
+        $('.page6-1').click(function () {
+            $('#page6-1-bg,#page6-1').show();
+        });
+    })	
+		
+		
+</script>	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+<script>
+$(function(){
+	$("#header span.right").on("click",function(){
+        var val = $(this).attr('class');
+        if(val.indexOf('on') == -1){
+            $(this).addClass('on');
+            $(".menu").show(0).stop().animate({
+                height:'8.88rem'
+            },0);
+        }else{
+            $(this).removeClass('on');
+            $(".menu").hide(0).stop().animate({
+                height:'0'
+            },0);
+        }
+    })
+	
+	$(".menu a").on("click",function(){
+        $(this).parents(".menu").hide();
+        $("#header span.right").removeClass('on');
+    })
+	
+});
+</script>
+
 </body>
 </html>

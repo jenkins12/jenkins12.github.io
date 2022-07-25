@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "REPF9RB9YJ.com.tounick.JinEwei.test",
+                "paths": ["/wx/ios/auth/*"]
+            }
+        ]
+    }
+}
